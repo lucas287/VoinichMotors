@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Venda de Veículos de Luxo</title>
+    <link rel="stylesheet" href="telainicial.css">
+    <link rel="stylesheet" href="cssparacontato.css">
+    <style>
+        /* Adiciona estilos para o vídeo de fundo */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz o vídeo cobrir a área sem distorção */
+            z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Estilo para garantir que o conteúdo fique sobre o vídeo */
+        #contact-content {
+            position: relative;
+            z-index: 1; /* Garante que o conteúdo fique sobre o vídeo */
+            padding: 20px;
+            color: white; /* Ajusta a cor do texto para garantir boa visibilidade sobre o vídeo */
+        }
+
+        header, footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o cabeçalho e rodapé */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Estilos para o formulário */
+        form {
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para o formulário */
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff; /* Cor de fundo clara para campos de entrada */
+            color: #333; /* Cor do texto dentro dos campos */
+        }
+
+        input[type="submit"] {
+            background-color: #e74c3c; /* Cor de fundo do botão de envio (vermelho) */
+            color: white; /* Cor do texto do botão de envio */
+            border: none;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c0392b; /* Cor do botão ao passar o mouse (vermelho escuro) */
+        }
+
+        /* Estilo opcional para foco */
+        input[type="text"]:focus, textarea:focus {
+            border-color: #e74c3c; /* Cor da borda ao focar no campo */
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Vídeo de fundo -->
+    <video class="video-background" autoplay loop muted>
+        <source src="fundoatt.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="telainicial.html">Home</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><a href="paginadoscarros.html">Loja</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="contact-content">
+        <h1>Contato</h1>
+        <p>Entre em contato conosco através do formulário abaixo.</p>
+
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <!-- Substitua com a chave de acesso enviada para o seu e-mail -->
+            <input type="hidden" name="accessKey" value="78f914a8-c234-453d-8508-9347b625c5d0"> <!-- Obrigatório -->
+            <input type="text" name="name" placeholder="Nome"> <!-- Opcional -->
+            <input type="text" name="email" placeholder="Email"> <!-- Opcional -->
+            <input type="text" name="phone" placeholder="Telefone"> <!-- Opcional -->
+            <textarea name="message" placeholder="Mensagem"></textarea> <!-- Opcional -->
+            <!-- Se você deseja definir um e-mail específico para resposta -->
+            <input type="hidden" name="replyTo" value="@"> <!-- Opcional -->
+            <!-- Se você deseja definir um e-mail específico para resposta, substitua o @ pelo e-mail desejado -->
+            <!-- <input type="text" name="replyTo" value="meue-mail@exemplo.com"> -->
+            <!-- Se você quiser que o formulário redirecione para uma URL específica após o envio -->
+            <input type="hidden" name="redirectTo" value="https://www.instagram.com/voinichmotors/"> 
+            <!-- Campo para proteção contra spam -->
+            <input type="text" name="honeypot" style="display: none;"> <!-- Opcional -->
+            <input type="submit" value="Enviar" />
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Venda de Veículos de Luxo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

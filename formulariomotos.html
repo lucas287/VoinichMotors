@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS DA LOJA</title>
+    <link rel="stylesheet" href="telainicial.css">
+    <link rel="stylesheet" type="text/css" href="cssformulario.css">
+</head>
+<body>
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="telainicial.html">Home</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><a href="#vehicles">Destaque</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Formulário de Venda de Motocicletas</h2>
+        <form action="submit_form.php" method="post">
+            <fieldset>
+                <legend>Informações do Cliente</legend>
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" value="?">
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" value="?">
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" value="?">
+
+                <label for="telefone">CPF:</label>
+                <input type="tel" id="cpf" name="cpf" value="?">
+                <label for="nascimento-dia">Data de Nascimento:</label>
+                <div class="date-select">
+                  
+                    <select id="nascimento-dia" name="nascimento-dia" required>
+                        <option value="" disabled selected>Dia</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+
+                    <select id="nascimento-mes" name="nascimento-mes" required>
+                        <option value="" disabled selected>Mês</option>
+
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+
+                    <select id="nascimento-ano" name="nascimento-ano" required>
+                        <option value="" disabled selected>Ano</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                    </select>
+                </div>
+
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero">
+                    <option value="masculino" selected>Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+               
+                
+                </select>
+                <label>Estado Civil:</label>
+                <label><input type="radio" name="estado_civil" value="solteiro" checked> Solteiro(a)</label>
+                <label><input type="radio" name="estado_civil" value="casado"> Casado(a)</label>
+                <label><input type="radio" name="estado_civil" value="divorciado"> Divorciado(a)</label>
+                <label><input type="radio" name="estado_civil" value="viuvo"> Viúvo(a)</label>
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações do Veículo</legend>
+                
+                <label for="marca">Marca:</label>
+                <select id="marca" name="marca">
+                    <option value="ford" selected>Kawasaki</option>
+                    <option value="chevrolet">KTM</option>
+                    <option value="toyota">Suzuki</option>
+                    <option value="honda">Honda</option>
+                    <option value="bmw">BMW</option>
+                    <option value="volkswagen">Yamaha</option>
+                    <option value="nissan">Voltz</option>
+                    <option value="cherry">Harley-Davidson</option>
+                    <option value="fiat">Ducati</option> 
+                    <option value="fiat">Triumph</option> 
+                </select>
+
+                <label for="modelo">Modelo:</label>
+                <select id="modelo" name="modelo">
+                    <option value="GSX 1000" selected>GSX 1000</option>
+                    <option value="Z900">Z900</option>
+                    <option value="Hornet">Hornet</option>
+                    <option value="XRE 300">XRE 300</option>
+                    <option value="1250 GS">1250 GS</option>
+                    <option value="1200">Triumph 1200</option>
+                    <option value="CG 160">CG 160</option>
+                    <option value="Triple765 RS">Triple765 RS</option>
+                </select>
+                
+                <label for="year">Ano:</label>
+                <input type="number" id="year" name="year" min="1950" max="2030" required>
+                
+                <label for="price">Preço:</label>
+                <input type="number" id="price" name="price" step="1" required>
+            </fieldset>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+        <footer> <!-- Define o rodapé da página -->
+        <p>&copy; 2024 Venda de Veículos de Luxo. Todos os direitos reservados.</p> <!-- Texto de direitos autorais no rodapé -->
+    </footer>
+</body>
+</html>
